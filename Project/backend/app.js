@@ -14,7 +14,7 @@ require('dotenv').config()
 
 
 //db connection
-mongoose.connect("mongodb://localhost:27017/test", {
+mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useCreateIndex:true,
     useUnifiedTopology:true
