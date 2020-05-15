@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="row justify-content-md-center">Welcome <span class="badge badge-secondary">{{ user.firstname + " " +user.lastname}}</span></h1>
+</div>
+
+<button (click)="logout()" class="btn btn-info">Logout</button>
+
+<button (click)="update()" class="btn btn-dark">Account Details</button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 align-self-start">
+
+      
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" *ngIf="showProfile">
+        <hr>
+        <h4>Account</h4>
+        <div class="form-group">
+          <label for="Firstname">FirstName:</label>
+          <input type="text" formControlName="firstname" required id="Firstname"  class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="Lastname">LastName:</label>
+          <input type="text" formControlName="lastname" required id="Lastname"  class="form-control">
+        </div>
+    
+        <p>Email:</p>
+        <p>{{user.email}}</p>
+        <button type="submit" [disabled]="!profileForm.valid" class="btn btn-success">Update details</button>
+        <button (click)="delete()" class="btn btn-danger">Delete Account</button>
+    </form>
+    
+    </div>
+  </div>
+</div>
