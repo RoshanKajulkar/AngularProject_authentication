@@ -5,7 +5,7 @@ const User = require("../models/user");
  exports.update = async (req,res) => {
 
     const resp =  await User.updateOne({ "email": req.body.email },req.body);
-    console.log(resp.n)
+    //console.log(resp.n)
 
     var query = User.find({ "email": req.body.email })
     query.exec(function (err, docs) {
@@ -25,7 +25,7 @@ const User = require("../models/user");
  }
 
 exports.Delete = (req,res) => {
-    console.log(req.body);
+    //console.log(req.body);
     User.deleteOne(req.body, function (err) {
         if(err){
             res.json({"error":"true"});
