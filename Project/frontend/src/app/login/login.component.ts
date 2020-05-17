@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   });
 
   notUser = false;
-
+  user = true;
   constructor(private fb: FormBuilder,private service : AuthService, private router: Router) { }
 
   
