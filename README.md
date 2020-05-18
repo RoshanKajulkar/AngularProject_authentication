@@ -1,7 +1,7 @@
 # AngularProject_authentication
 
 Technology Stack
-# Front End
+# Front-End
 Angular &
 Bootstrap
 
